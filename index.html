@@ -83,4 +83,96 @@
     }
     .testimonios {
       background-color: #1e1e1e;
-      padding:
+      padding: 60px 20px;
+      color: #ccc;
+    }
+    .testimonios blockquote {
+      font-style: italic;
+      margin: 20px auto;
+      max-width: 640px;
+    }
+    .email-capture {
+      background-color: #222;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .email-capture input[type="email"] {
+      padding: 12px;
+      border-radius: 4px;
+      border: none;
+      margin-right: 10px;
+      width: 250px;
+    }
+    .email-capture button {
+      padding: 12px 24px;
+      border: none;
+      background-color: #00c853;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #1e1e1e;
+      color: #aaa;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.png" alt="Logo La Funda PR">
+</header>
+
+<section class="hero">
+  <h1>Multiplica tu dinero con La Funda PR</h1>
+  <p>Aprende a invertir o deja que lo hagamos por ti con estrategias y proyectos de alto rendimiento.</p>
+</section>
+
+<section class="section aprende" id="aprende">
+  <h2>Aprende con nosotros</h2>
+  <p>Accede a nuestros cursos de Forex y Criptomonedas en formatos intensivos o grabados, con sesiones personalizadas y análisis reales del mercado.</p>
+  <a href="https://forms.gle/YOUR_FORM_ID" class="cta-button">Quiero aprender</a>
+</section>
+
+<section class="section invierte" id="invierte">
+  <h2>Inversión gestionada</h2>
+  <p>Nos encargamos de tu inversión en proyectos verificados. Tú monitoreas. Nosotros gestionamos con proyecciones reales de hasta 30X.</p>
+  <a href="https://forms.gle/YOUR_FORM_ID" class="cta-button">Quiero invertir</a>
+</section>
+
+<section class="testimonios">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <blockquote>"Gracias a La Funda PR pude entender el mercado desde cero y ahora genero ingresos constantes."</blockquote>
+  <blockquote>"Invirtiendo con ellos vi crecer mi capital sin tener que mover un dedo. 100% recomendado."</blockquote>
+</section>
+
+<section class="email-capture">
+  <h2>Recibe actualizaciones y oportunidades exclusivas</h2>
+  <form action="#">
+    <input type="email" placeholder="Tu correo electrónico">
+    <button type="submit">Suscribirme</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 La Funda PR | <a href="mailto:lafundapr@gmail.com">lafundapr@gmail.com</a> | 787-478-8885</p>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+  sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
