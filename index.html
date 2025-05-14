@@ -1,97 +1,170 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Funda PR - Aprende o Invierte</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f5f5f5;
-            color: #222;
-        }
-        header {
-            background-color: #ffffff;
-            padding: 20px;
-            text-align: center;
-        }
-        header img {
-            width: 200px;
-        }
-        .hero {
-            background: linear-gradient(to right, #0f9b0f, #000000);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-        .hero h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-        .section h2 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-        .section p {
-            max-width: 700px;
-            margin: auto;
-            font-size: 1.1em;
-        }
-        .cta-button {
-            margin-top: 20px;
-            padding: 15px 30px;
-            font-size: 1em;
-            background-color: #0f9b0f;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            text-decoration: none;
-            display: inline-block;
-        }
-        footer {
-            background-color: #222;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        footer a {
-            color: #00ffcc;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Funda PR - Aprende o Invierte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #1e1e1e;
+      padding: 20px;
+      text-align: center;
+    }
+    header img {
+      width: 180px;
+    }
+    .hero {
+      background: linear-gradient(to right, #00c853, #1e1e1e);
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .section h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    .section p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 1.1em;
+    }
+    .cta-button {
+      margin-top: 20px;
+      padding: 14px 28px;
+      font-size: 1em;
+      background-color: #00c853;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #00b248;
+    }
+    .testimonios {
+      background-color: #1e1e1e;
+      padding: 40px 20px;
+      color: #ccc;
+    }
+    .testimonios blockquote {
+      font-style: italic;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+    .email-capture {
+      background-color: #222;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .email-capture input[type="email"] {
+      padding: 12px;
+      border-radius: 4px;
+      border: none;
+      margin-right: 10px;
+      width: 250px;
+    }
+    .email-capture button {
+      padding: 12px 24px;
+      border: none;
+      background-color: #00c853;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #1e1e1e;
+      color: #aaa;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <img src="logo.png" alt="Logo La Funda PR">
+  <img src="logo.png" alt="Logo La Funda PR">
 </header>
 
 <section class="hero">
-    <h1>Multiplica tu dinero con La Funda PR</h1>
-    <p>Elige entre aprender a invertir o deja que lo hagamos por ti con proyectos reales de alto retorno.</p>
+  <h1>Multiplica tu dinero con La Funda PR</h1>
+  <p>Elige entre aprender a invertir o deja que lo hagamos por ti con proyectos reales de alto retorno.</p>
 </section>
 
-<section class="section">
-    <h2>🎓 Aprende con nosotros</h2>
-    <p>Accede a nuestros cursos de Forex y Criptomonedas, en formatos intensivos o grabados, con sesiones 1:1 y acceso a análisis reales del mercado.</p>
-    <a href="https://forms.gle/YOUR_FORM_ID" class="cta-button">Quiero aprender</a>
+<section class="section" id="aprende">
+  <h2>🎓 Aprende con nosotros</h2>
+  <p>Accede a nuestros cursos de Forex y Criptomonedas, en formatos intensivos o grabados, con sesiones 1:1 y acceso a análisis reales del mercado.</p>
+  <a href="https://forms.gle/YOUR_FORM_ID" class="cta-button">Quiero aprender</a>
 </section>
 
-<section class="section" style="background-color: #e1f8e6;">
-    <h2>💼 Inversión gestionada</h2>
-    <p>Nos encargamos de tu inversión en proyectos verificados. Tú monitoreas. Nosotros gestionamos con proyecciones de hasta 30X.</p>
-    <a href="https://forms.gle/YOUR_FORM_ID" class="cta-button">Quiero invertir</a>
+<section class="section" id="invierte">
+  <h2>💼 Inversión gestionada</h2>
+  <p>Nos encargamos de tu inversión en proyectos verificados. Tú monitoreas. Nosotros gestionamos con proyecciones de hasta 30X.</p>
+  <a href="https://forms.gle/YOUR_FORM_ID" class="cta-button">Quiero invertir</a>
+</section>
+
+<section class="testimonios">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <blockquote>"Gracias a La Funda PR pude entender el mercado desde cero y ahora genero ingresos constantes."</blockquote>
+  <blockquote>"Invirtiendo con ellos vi crecer mi capital sin tener que mover un dedo. 100% recomendado."</blockquote>
+</section>
+
+<section class="email-capture">
+  <h2>Recibe actualizaciones y oportunidades exclusivas</h2>
+  <form action="#">
+    <input type="email" placeholder="Tu correo electrónico">
+    <button type="submit">Suscribirme</button>
+  </form>
 </section>
 
 <footer>
-    <p>© 2025 La Funda PR | <a href="mailto:lafundapr@gmail.com">lafundapr@gmail.com</a> | 787-478-8885</p>
+  <p>© 2025 La Funda PR | <a href="mailto:lafundapr@gmail.com">lafundapr@gmail.com</a> | 787-478-8885</p>
 </footer>
+
+<script>
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
 
 </body>
 </html>
